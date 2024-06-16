@@ -27,7 +27,7 @@ class Todo {
         id: json["id"],
         text: json["text"],
         complete: json["complete"],
-        createdAt: DateTime.parse(json["created_at"]),
+        createdAt: DateTime.parse(json["created_at"].toString()),
         updatedAt: DateTime.parse(json["updated_at"]),
       );
 

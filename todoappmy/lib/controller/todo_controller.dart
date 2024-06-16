@@ -49,7 +49,7 @@ class TodoController extends GetxController {
   Future updateTodo(id, text) async {
     try {
       var request = await http.post(
-        Uri.parse('http://10.16.52.73:80/api/todos/$id'),
+        Uri.parse('http://192.168.1.6/api/todos/$id'),
         headers: {
           'Accept': 'Application/json',
         },
@@ -67,7 +67,10 @@ class TodoController extends GetxController {
     }
   }
 
-  Future insertTodo({required String textdata}) async {
+  Future insertTodo({
+    required String textdata,
+    required String created,
+  }) async {
     var data = {
       'text': textdata,
     };
@@ -97,7 +100,7 @@ class TodoController extends GetxController {
   Future deleteTodo(id) async {
     try {
       var request = await http.get(
-        Uri.parse('http://10.16.52.73:80/api/todos/$id'),
+        Uri.parse('http://192.168.1.6/api/todos/$id'),
         headers: {
           'Accept': 'Application/json',
         },

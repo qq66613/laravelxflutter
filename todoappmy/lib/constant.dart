@@ -1,2 +1,2 @@
-var url = Uri.parse('http://10.16.52.73:80/api/todos');
+var url = Uri.parse('http://192.168.1.6/api/todos');
 //var update = 
